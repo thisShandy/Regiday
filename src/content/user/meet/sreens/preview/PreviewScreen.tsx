@@ -11,14 +11,16 @@ const PreviewScreen: React.FC<Props> = (props) => {
   return (
     <SafeAreaView>
       <View>
-
+        <Text style={styles.head}>Hello</Text>
       </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-
+  head: {
+    fontFamily: "Poppins-Thin",
+  }
 });
 
 export default PreviewScreen;
