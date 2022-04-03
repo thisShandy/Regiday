@@ -1,7 +1,7 @@
 # REGIDAY
 <br/>
 
-![](./src/assets/README/icon.png)
+![](./src/assets/img/appLogo.png)
 <br/>
 <br/>
 <br/>
