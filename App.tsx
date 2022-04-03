@@ -4,7 +4,7 @@ import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import MeetScreen from "~content/user/meet/sreens/preview/PreviewScreen";
+import MeetScreen from "~content/user/meet/sreens/MeetScreen";
 
 export type Props = {
 
