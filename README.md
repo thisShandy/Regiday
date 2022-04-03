@@ -18,5 +18,5 @@ This is my pet project where I test interesting technologies and embody new idea
 - Email: shandyrix@gmail.com
 - LinkedIn: https://www.linkedin.com/in/this-shandy/
 - Instagram: https://www.instagram.com/dark.shandy/
-- 
+
 <hr>
