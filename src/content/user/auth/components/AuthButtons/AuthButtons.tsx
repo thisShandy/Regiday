@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     paddingHorizontal: 15,
     paddingVertical: 10,
-    borderRadius: 12,
+    borderRadius: 10,
   },
   text: {
     fontFamily: "Poppins-Medium",
