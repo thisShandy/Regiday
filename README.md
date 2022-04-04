@@ -1,10 +1,4 @@
 # REGIDAY
-<br/>
-
-![](./src/assets/img/appLogo.png)
-<br/>
-<br/>
-<br/>
 This is my pet project where I test interesting technologies and embody new ideas.
 <br/>
 ## Main idea 🔥
