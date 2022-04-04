@@ -32,8 +32,8 @@ const PreviewScreen: React.FC<Props> = ({ next, image, text, last }) => {
           <ScreenIcon image={image} />
           <Text style={styles.description}>{text}</Text>
           <NextButton
-            next={ last ? "Login" : next }
-            title={last ? "Login" : "Next"}
+            next={ last ? "Auth" : next }
+            title={ last ? "Login" : "Next" }
           />
         </SafeAreaView>
       </ImageBackground>

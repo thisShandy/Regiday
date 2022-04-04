@@ -1,10 +1,11 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import MeetScreen from "~content/user/meet/sreens/MeetScreen";
+import MeetScreen from "~content/user/meet/srceens/MeetScreen";
+import AuthScreen from "~content/user/auth/screeens/AuthScreen";
 
 export type Props = {
 
@@ -21,6 +22,7 @@ const App: React.FC<Props> = () => {
         }}
       >
         <Stack.Screen name="Meet" component={MeetScreen} />
+        <Stack.Screen name="Auth" component={AuthScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
