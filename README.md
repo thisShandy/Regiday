@@ -7,6 +7,7 @@
 <br/>
 This is my pet project where I test interesting technologies and embody new ideas.
 <br/>
+## Main idea 🔥
 The main idea creates a small mobile app for social messaging and self-development. Also, users will be able to share their experiences with each other and suggest more productive ways of growth
 <br/>
 
