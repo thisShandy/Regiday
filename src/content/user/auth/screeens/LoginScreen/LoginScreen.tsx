@@ -27,6 +27,8 @@ const LoginScreen: React.FC<Props> = () => {
           }}
           placeholder="Login"
           placeholderTextColor={colorScheme.grayColor}
+          autoCapitalize="none"
+          autoCorrect={false}
           keyboardType="default"
         />
         <TextInput
@@ -38,6 +40,8 @@ const LoginScreen: React.FC<Props> = () => {
           }}
           placeholder="Password"
           placeholderTextColor={colorScheme.grayColor}
+          autoCapitalize="none"
+          autoCorrect={false}
           keyboardType="default"
           secureTextEntry={true}
         />

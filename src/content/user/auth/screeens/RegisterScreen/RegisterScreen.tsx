@@ -28,6 +28,8 @@ const RegisterScreen: React.FC<Props> = () => {
           }}
           placeholder="Email"
           placeholderTextColor={colorScheme.grayColor}
+          autoCapitalize="none"
+          autoCorrect={false}
           keyboardType="email-address"
         />
         <TextInput
@@ -38,6 +40,8 @@ const RegisterScreen: React.FC<Props> = () => {
           }}
           placeholder="Login"
           placeholderTextColor={colorScheme.grayColor}
+          autoCapitalize="none"
+          autoCorrect={false}
           keyboardType="default"
         />
         <TextInput
@@ -49,6 +53,8 @@ const RegisterScreen: React.FC<Props> = () => {
           }}
           placeholder="Password"
           placeholderTextColor={colorScheme.grayColor}
+          autoCapitalize="none"
+          autoCorrect={false}
           keyboardType="default"
           secureTextEntry={true}
         />
