@@ -10,7 +10,7 @@ import {
 import { appBackground } from "~constants/imageConstants";
 
 import ScreenIcon from "~content/user/meet/components/ScreenIcon/ScreenIcon";
-import NextButton from "~content/user/meet/components/NextButton/NextButton";
+import MainButton from "~components/buttons/MainButton";
 
 export type Props = {
   next: string,
@@ -31,7 +31,11 @@ const PreviewScreen: React.FC<Props> = ({ next, image, text, last }) => {
         <SafeAreaView style={styles.container}>
           <ScreenIcon image={image} />
           <Text style={styles.description}>{text}</Text>
-          <NextButton
+          <MainButton
+            shadow={{
+              position: "absolute",
+              bottom: 15,
+            }}
             next={ last ? "Auth" : next }
             title={ last ? "Login" : "Next" }
           />

@@ -59,7 +59,7 @@ const AuthButtons: React.FC<Props> = ({ reverse }) => {
           onPress={
             reverse ? continueRegistration : singNavigate
           }
-          style={{ ...styles.button }}
+          style={{ ...styles.button, backgroundColor: colorScheme.mainColor }}
         >
           <Text style={{ ...styles.text, color: colorScheme.lightColor }}>Sign up</Text>
         </TouchableOpacity>
@@ -82,7 +82,7 @@ const AuthButtons: React.FC<Props> = ({ reverse }) => {
           onPress={
             reverse ? loginNavigate : continueLogin
           }
-          style={{ ...styles.button }}
+          style={{ ...styles.button, backgroundColor: colorScheme.mainColor }}
         >
           <Text style={{ ...styles.text, color: colorScheme.lightColor }}>Login</Text>
         </TouchableOpacity>
@@ -112,7 +112,6 @@ const styles = StyleSheet.create({
   button: {
     width: 95,
     alignItems: "center",
-    backgroundColor: "red",
     paddingHorizontal: 15,
     paddingVertical: 10,
     borderRadius: 10,
