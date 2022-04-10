@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import MeetScreen from "~content/user/meet/srceens/MeetScreen";
 import AuthScreen from "~content/user/auth/screeens/AuthScreen";
+import QuizScreen from "~content/user/quiz/screens/QuizScreen"
 
 export type Props = {
 
@@ -23,6 +24,7 @@ const App: React.FC<Props> = () => {
       >
         <Stack.Screen name="Meet" component={MeetScreen} />
         <Stack.Screen name="Auth" component={AuthScreen} />
+        <Stack.Screen name="Quiz" component={QuizScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

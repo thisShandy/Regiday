@@ -6,7 +6,6 @@ import { lightTheme, darkTheme } from "~constants/colorConstants";
 import AuthHead from "~content/user/auth/components/AuthHead/AuthHead";
 import AuthButtons from "~content/user/auth/components/AuthButtons/AuthButtons";
 
-
 export type Props = {
 
 }
@@ -17,7 +16,7 @@ const RegisterScreen: React.FC<Props> = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{ ...styles.container,  }}>
+      <View style={styles.container}>
         <AuthHead title="Register" />
         <TextInput
           style={{
