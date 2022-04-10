@@ -3,31 +3,12 @@ import { Dimensions, SafeAreaView, StyleSheet, Text, useColorScheme, View } from
 
 import QuizSectionTitle from "~content/user/quiz/components/QuizSectionTitle/QuizSectionTitle";
 
-import { jsImg, gymImg, designImg, blockchainImg } from "~content/user/quiz/constants/channelsConstants";
+import channels from "./lists/ChannelsList"
 import ChannelItem from "~content/user/quiz/components/ChannelItem/ChannelItem";
 
 export type Props = {
 
 }
-
-const channels = [
-  {
-    image: jsImg,
-    title: "JS masters",
-  },
-  {
-    image: gymImg,
-    title: "GYM",
-  },
-  {
-    image: designImg,
-    title: "Design",
-  },
-  {
-    image: blockchainImg,
-    title: "Blockchain",
-  },
-]
 
 const windowWidth = Dimensions.get('window').width;
 

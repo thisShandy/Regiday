@@ -24,7 +24,7 @@ const ChannelItem: React.FC<Props> = ({ props }) => {
   return (
     <DropShadow
       style={{
-        shadowColor: colorScheme.darkColor,
+        shadowColor: isSelected ? colorScheme.mainColor : colorScheme.darkColor,
         shadowOffset: {
           width: 0,
           height: 7,

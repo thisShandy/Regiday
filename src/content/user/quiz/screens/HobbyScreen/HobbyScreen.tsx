@@ -6,6 +6,7 @@ import { lightTheme, darkTheme } from "~constants/colorConstants";
 import QuizTitle from "~content/user/quiz/components/QuizTitle/QuizTitle";
 import HobbySection from "./components/HobbySection/HobbySection";
 import ChannelsSection from "./components/ChannelsSection/ChannelsSection";
+import FriendsSection from "./components/FriendsSection/FriendsSection";
 
 export type Props = {
 
@@ -22,6 +23,7 @@ const HobbyScreen: React.FC<Props> = () => {
         <ScrollView>
           <HobbySection />
           <ChannelsSection />
+          <FriendsSection />
         </ScrollView>
       </View>
     </SafeAreaView>
