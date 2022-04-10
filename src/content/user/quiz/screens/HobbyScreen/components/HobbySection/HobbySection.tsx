@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   TouchableOpacity,
+  Animated,
   Text,
   View,
   Image,
@@ -15,6 +16,9 @@ import { lightTheme, darkTheme } from "~constants/colorConstants";
 import { arrowDown } from "~constants/imageConstants";
 import QuizSectionTitle from "~content/user/quiz/components/QuizSectionTitle/QuizSectionTitle";
 
+import hobbiesList from "./lists/HobbiesList";
+import HobbyItem from "./components/HobbyItem/HobbyItem";
+
 export type Props = {
 
 }
@@ -23,7 +27,18 @@ const windowWidth = Dimensions.get('window').width;
 
 const HobbySection: React.FC<Props> = () => {
 
+  const [ isOpen, setOpen ] = useState(false);
+  const [ arrowPosition, setArrowPosition ] = useState("0deg");
   const colorScheme = useColorScheme() === "light" ? lightTheme : darkTheme;
+
+  const openHobbies = () => {
+    if (!isOpen) {
+      setArrowPosition("180deg");
+    } else {
+      setArrowPosition("0deg");
+    }
+    setOpen(!isOpen);
+  };
 
   return (
     <View style={styles.container}>
@@ -37,7 +52,9 @@ const HobbySection: React.FC<Props> = () => {
           },
           shadowOpacity: 0.05,
           shadowRadius: 10,
-          width: windowWidth * 0.75,
+          paddingHorizontal: 40,
+          alignItems: "center",
+          width: windowWidth * 0.90,
         }}
       >
         <View style={{ ...styles.select, backgroundColor: colorScheme.fieldColor }}>
@@ -55,10 +72,43 @@ const HobbySection: React.FC<Props> = () => {
               alignItems: "center",
             }}
           >
-            <TouchableOpacity style={{ ...styles.button, backgroundColor: colorScheme.mainColor }}>
-              <Image style={styles.arrow} source={arrowDown} />
+            <TouchableOpacity
+              onPress={openHobbies}
+              style={{
+                ...styles.button,
+                backgroundColor: colorScheme.mainColor
+              }}>
+              <Image style={{ ...styles.arrow, transform: [{ rotate: arrowPosition }] }} source={arrowDown} />
             </TouchableOpacity>
           </DropShadow>
+        </View>
+      </DropShadow>
+      <DropShadow
+        style={{
+          shadowColor: colorScheme.darkColor,
+          shadowOffset: {
+            width: 0,
+            height: 5,
+          },
+          shadowOpacity: 0.05,
+          shadowRadius: 10,
+          paddingHorizontal: 40,
+          alignItems: "center",
+          width: windowWidth * 0.90,
+          display: isOpen ? "flex" : "none",
+        }}
+      >
+        <View style={{ ...styles.hobbiesContainer, backgroundColor: colorScheme.fieldColor }}>
+          {
+            hobbiesList.map((item, index) => {
+              let last = false;
+              if (index === hobbiesList.length-1) {
+                last = true;
+              }
+              const props = { ...item, last };
+              return <HobbyItem key={item.title} props={props} />;
+            })
+          }
         </View>
       </DropShadow>
     </View>
@@ -70,8 +120,7 @@ const styles = StyleSheet.create({
   container: {
     marginTop: 40,
     alignItems: "center",
-    width: windowWidth * 0.75,
-    height: 40,
+    width: windowWidth,
   },
 
   select: {
@@ -104,6 +153,15 @@ const styles = StyleSheet.create({
   arrow: {
     width: 14,
     height: 14,
+  },
+
+  hobbiesContainer: {
+    width: windowWidth * 0.70,
+    alignItems: "center",
+
+    marginTop: 20,
+    paddingVertical: 15,
+    borderRadius: 16,
   }
 
 });
