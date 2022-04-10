@@ -17,8 +17,13 @@ const HobbyItem: React.FC<Props> = ({ props }) => {
 
   const [ active, setActive ] = useState(false);
 
+  const changeActive = () => {
+    setActive(!active);
+  };
+
   return (
     <TouchableOpacity
+      onPress={changeActive}
       style={{
         ...styles.container,
         borderBottomColor: colorScheme.grayColor,
@@ -28,7 +33,14 @@ const HobbyItem: React.FC<Props> = ({ props }) => {
       <Text>{props.icon}</Text>
       <View style={styles.titleWrapper}>
         <Text>{props.title}</Text>
-
+        <View style={{ ...styles.checkbox, backgroundColor: colorScheme.lightColor }}>
+          <View
+            style={{ ...styles.check,
+              backgroundColor: colorScheme.darkColor,
+              display: active ? "flex" : "none",
+            }}
+          />
+        </View>
       </View>
     </TouchableOpacity>
   );
@@ -46,6 +58,10 @@ const styles = StyleSheet.create({
   },
 
   titleWrapper: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+
     flex: 1,
     marginLeft: 10,
   },
@@ -54,6 +70,24 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins-Regular",
     fontSize: 12,
   },
+
+  checkbox: {
+    justifyContent: "center",
+    alignItems: "center",
+
+    width: 12,
+    height: 12,
+
+    top: 1,
+    borderRadius: 3,
+  },
+
+  check: {
+    width: 6,
+    height: 6,
+
+    borderRadius: 2,
+  }
 
 });
 
